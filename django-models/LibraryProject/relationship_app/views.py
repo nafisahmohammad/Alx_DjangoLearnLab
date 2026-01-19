@@ -64,17 +64,16 @@ from django.contrib.auth.decorators import permission_required
 from django.http import HttpResponse
 
 
-@permission_required('relationship_app.canaddbook')
+@permission_required('relationship_app.can_add_book')
 def add_book(request):
     return HttpResponse("Add book")
 
 
-@permission_required('relationship_app.canchangebook')
+@permission_required('relationship_app.can_change_book')
 def edit_book(request):
     return HttpResponse("Edit book")
 
 
-@permission_required('relationship_app.candeletebook')
+@permission_required('relationship_app.can_delete_book')
 def delete_book(request):
     return HttpResponse("Delete book")
-
